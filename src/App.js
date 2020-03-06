@@ -28,9 +28,7 @@ export default function App() {
 
         {/* A switch uses the route to pull a different component */}
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
+          <Route path="/about" component={About}/>
           <Route path="/users">
             <Users />
           </Route>
