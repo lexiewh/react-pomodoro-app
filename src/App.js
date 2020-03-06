@@ -28,7 +28,7 @@ export default function App() {
 
         {/* A switch uses the route to pull a different component */}
         <Switch>
-          <Route path="/about" component={About}/>
+          <Route path="/about" component={() => <About name="Lexie" />}/>
           <Route path="/users">
             <Users />
           </Route>
@@ -46,8 +46,8 @@ function Home() {
   return <h2>Home</h2>;
 }
 
-function About() {
-  return <h2>About</h2>;
+function About(props) {
+  return <h2>About {props.name}</h2>;
 }
 
 function Users() {
