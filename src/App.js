@@ -1,5 +1,6 @@
 import React from 'react'
-import './stylesheets/main.css'
+import 'semantic-ui-css/semantic.min.css';
+//import './stylesheets/main.css'
 
 // Components
 import TimeForm from './components/TimeForm'

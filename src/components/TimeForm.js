@@ -1,6 +1,6 @@
 import React from 'react'
-import '../stylesheets/main.css'
-
+import logo from '../assets/logo.png'
+import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
 
 export default class TimeForm extends React.Component {
   constructor(props) {
@@ -22,37 +22,50 @@ export default class TimeForm extends React.Component {
 
   render() {
     return(
-      <main>
-        <form>
-            <input
-              name="productiveTime"
-              value={this.state.productiveTime}
-              onChange={this.handleChange}
-              placeholder="Productive Time"
-            /><br />
+      <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign="middle">
+        <Grid.Column style={{ maxWidth: 450 }}>
+          <Header as='h2' textAlign='center' color='red'>
+            <Image src={logo}/> Enter your times
+          </Header>
+          <Form size='large'>
+            <Segment stacked>
 
-            <input
-              name="shortBreak"
-              value={this.state.shortBreak}
-              onChange={this.handleChange}
-              placeholder="Short Break"
-            /><br />
+              <Form.Input
+                fluid
+                icon='time'
+                iconPosition='left'
+                name="productiveTime"
+                value={this.state.productiveTime}
+                onChange={this.handleChange}
+                placeholder="Productive Time"
+              />
 
-            <input
-              name="longBreak"
-              value={this.state.longBreak}
-              onChange={this.handleChange}
-              placeholder="Long Break"
-            /><br />
+              <Form.Input
+                fluid
+                icon='time'
+                iconPosition='left'
+                name="shortBreak"
+                value={this.state.shortBreak}
+                onChange={this.handleChange}
+                placeholder="Short Break"
+              />
 
-        </form>
+              <Form.Input
+                fluid
+                icon='time'
+                iconPosition='left'
+                name="longBreak"
+                value={this.state.longBreak}
+                onChange={this.handleChange}
+                placeholder="Long Break"
+              />
 
-        <hr />
-        <h3>Entered Information:</h3>
-        <p>Productive time: {this.state.productiveTime}</p>
-        <p>Short break: {this.state.shortBreak}</p>
-        <p>Long break: {this.state.longBreak}</p>
-      </main>
+              <Button fluid size='large' color='red'>Submit</Button>
+
+            </Segment>
+          </Form>
+        </Grid.Column>
+      </Grid>
     )
   }
 }

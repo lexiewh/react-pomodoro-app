@@ -52,3 +52,7 @@ table {
   Form
   ====================
  */
+
+.form, .btn {
+	color: #dd2e44;
+}
