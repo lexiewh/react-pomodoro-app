@@ -8,7 +8,10 @@ export default function App() {
     <BrowserRouter>
         <Switch>
           <Route exact path="/" component={TimeForm}/>
-          <Route path="/timer/:productiveTime-:shortBreak-:longBreak" component={Timer}/>
+          <Route
+            path="/timer/:productiveTime-:shortBreak-:longBreak"
+            component={Timer}
+            />
         </Switch>
     </BrowserRouter>
   )

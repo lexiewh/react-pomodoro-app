@@ -1,11 +1,20 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 
-function Timer() {
-  const { productiveTime, shortBreak, longBreak } = useParams()
-  return(
-    <h1>Hi {productiveTime} {shortBreak} {longBreak}</h1>
-  )
+
+export default class Timer extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      prod: this.props.match.params.productiveTime,
+      short: this.props.match.params.shortBreak,
+      long: this.props.match.params.longBreak
+    }
+  }
+
+
+  render() {
+    return(
+      <h1>Hi {this.state.prod}</h1>
+    )
+  }
 }
-
-export default Timer
