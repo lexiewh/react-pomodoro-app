@@ -54,5 +54,9 @@ table {
  */
 
 .form, .btn {
-	color: #dd2e44;
+	color: #dd2e44 !important;
+}
+
+body {
+	background-color: whitesmoke !important;
 }

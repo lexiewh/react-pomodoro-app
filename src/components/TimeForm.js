@@ -1,6 +1,8 @@
 import React from 'react'
 import logo from '../assets/logo.png'
-import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
+import { Form, Grid, Header, Image, Segment, Button } from 'semantic-ui-react'
+import { Link } from "react-router-dom";
+
 
 export default class TimeForm extends React.Component {
   constructor(props) {
@@ -24,7 +26,7 @@ export default class TimeForm extends React.Component {
     return(
       <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign="middle">
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as='h2' textAlign='center' color='red'>
+          <Header as='h2' textAlign='center' className="form">
             <Image src={logo}/> Enter your times
           </Header>
           <Form size='large'>
@@ -60,8 +62,9 @@ export default class TimeForm extends React.Component {
                 placeholder="Long Break"
               />
 
-              <Button fluid size='large' color='red'>Submit</Button>
-
+              <Link to="/timer">
+                <Button fluid size='large' className="btn">Submit</Button>
+              </Link>
             </Segment>
           </Form>
         </Grid.Column>
