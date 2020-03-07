@@ -1,8 +1,10 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 function Timer() {
+  const { productiveTime, shortBreak, longBreak } = useParams()
   return(
-    <h1>Hi</h1>
+    <h1>Hi {productiveTime} {shortBreak} {longBreak}</h1>
   )
 }
 

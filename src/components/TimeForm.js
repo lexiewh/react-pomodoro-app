@@ -62,7 +62,9 @@ export default class TimeForm extends React.Component {
                 placeholder="Long Break"
               />
 
-              <Link to="/timer">
+              <Link
+                to={`/timer/${this.state.productiveTime}-${this.state.shortBreak}-${this.state.longBreak}`}
+              >
                 <Button fluid size='large' className="btn">Submit</Button>
               </Link>
             </Segment>
