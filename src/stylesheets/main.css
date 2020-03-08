@@ -53,10 +53,28 @@ table {
   ====================
  */
 
+
 .form, .btn {
 	color: #dd2e44 !important;
 }
 
 body {
 	background-color: whitesmoke !important;
+}
+
+.timer-header {
+	text-decoration: underline;
+	color: #dd2e44 !important
+}
+
+.time {
+ color: black;
+ font-size: 150px;
+}
+
+.container {
+	background-color: white !important;
+	box-shadow: 3px 3px 10px 2px rgba(230,230,230,1) !important;
+	border-radius: 10px !important;
+	padding: 50px !important;
 }
