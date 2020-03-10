@@ -1,6 +1,9 @@
 import React from 'react'
 import { Grid, Header, Button } from 'semantic-ui-react'
+import UIfx from 'uifx'
+import alertAudio from '../assets/alert.mp3'
 
+const alert = new UIfx(alertAudio);
 
 export default class Timer extends React.Component {
   constructor(props) {
@@ -48,6 +51,7 @@ export default class Timer extends React.Component {
         if (minutes === 0) {
           this.resetSessionMinutes()
           this.sessionSwitch()
+          alert.play()
         } else {
           if (session === "Pomodoro Session") {
             this.setState({
