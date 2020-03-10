@@ -21,6 +21,7 @@ export default class Timer extends React.Component {
     this.getSessionMinutes = this.getSessionMinutes.bind(this)
     this.resetSessionMinutes = this.resetSessionMinutes.bind(this)
     this.subtractInterval = this.subtractInterval.bind(this)
+    this.intervalText = this.intervalText.bind(this)
   }
 
   format(time) {
@@ -122,6 +123,18 @@ resetSessionMinutes() {
     }
   }
 
+  intervalText() {
+    if (this.state.interval === 1) {
+      return(
+        <p>You have {this.state.interval} short break before a long break</p>
+      )
+    } else {
+      return(
+        <p>You have {this.state.interval} short breaks before a long break</p>
+      )
+    }
+  }
+
 
   render() {
     return(
@@ -131,7 +144,7 @@ resetSessionMinutes() {
           {this.state.session}
         </Header>
 
-        <p>You have {this.state.interval} short breaks before a long break</p>
+        {this.intervalText()}
 
         <p className="minutes">{this.getSessionMinutes()}:</p>
         <p className="seconds">{this.format(this.state.seconds)}</p>
