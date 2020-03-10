@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../assets/logo.png'
-import { Form, Grid, Header, Image, Segment, Button } from 'semantic-ui-react'
+import { Form, Grid, Header, Image, Segment, Button, Popup } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
 
 
@@ -11,7 +11,8 @@ export default class TimeForm extends React.Component {
     this.state = {
       productiveTime: "",
       shortBreak: "",
-      longBreak: ""
+      longBreak: "",
+      interval: ""
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -25,9 +26,9 @@ export default class TimeForm extends React.Component {
   render() {
     return(
       <Grid textAlign="center" style={{ height: '100vh' }} verticalAlign="middle">
-        <Grid.Column style={{ maxWidth: 450 }}>
+        <Grid.Column style={{ maxWidth: 500 }}>
           <Header as='h2' textAlign='center' className="form">
-            <Image src={logo}/> Enter your times
+            <Image src={logo}/> How do you want to work?
           </Header>
           <Form size='large'>
             <Segment stacked>
@@ -60,6 +61,20 @@ export default class TimeForm extends React.Component {
                 value={this.state.longBreak}
                 onChange={this.handleChange}
                 placeholder="Long Break"
+              />
+
+              <Popup
+                trigger={<Form.Input
+                          fluid
+                          icon='redo'
+                          iconPosition='left'
+                          name="interval"
+                          value={this.state.interval}
+                          onChange={this.handleChange}
+                          placeholder="Interval"
+                          />}
+                content="Interval will be the amount of times you will have a short break before a long break."
+                position="right center"
               />
 
               <Link
