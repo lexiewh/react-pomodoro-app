@@ -9,7 +9,7 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={TimeForm}/>
           <Route
-            path="/timer/:productiveTime-:shortBreak-:longBreak"
+            path="/timer/:productiveTime-:shortBreak-:longBreak-:interval"
             component={Timer}
             />
         </Switch>

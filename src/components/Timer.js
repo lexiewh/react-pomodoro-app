@@ -12,7 +12,7 @@ export default class Timer extends React.Component {
       long: Number(this.props.match.params.longBreak),
       seconds: 0,
       session: 'Pomodoro Session',
-      interval: 4
+      interval: Number(this.props.match.params.interval)
     }
 
     this.format = this.format.bind(this)
@@ -20,6 +20,7 @@ export default class Timer extends React.Component {
     this.sessionSwitch = this.sessionSwitch.bind(this)
     this.getSessionMinutes = this.getSessionMinutes.bind(this)
     this.resetSessionMinutes = this.resetSessionMinutes.bind(this)
+    this.subtractInterval = this.subtractInterval.bind(this)
   }
 
   format(time) {
@@ -105,9 +106,19 @@ resetSessionMinutes() {
     }
     if (session === "Short Break") {
       this.setState({ session: "Pomodoro Session"})
+      this.subtractInterval()
     }
     if (session === "Long Break") {
       this.setState({ session: "Pomodoro Session" })
+    }
+  }
+
+  subtractInterval() {
+    if (this.state.interval > 0) {
+      this.setState({interval: this.state.interval - 1})
+    }
+    else {
+      this.setState({interval: Number(this.props.match.params.interval)})
     }
   }
 
@@ -119,6 +130,8 @@ resetSessionMinutes() {
         <Header as='h1' textAlign='center' className='timer-header'>
           {this.state.session}
         </Header>
+
+        <p>You have {this.state.interval} short breaks before a long break</p>
 
         <p className="minutes">{this.getSessionMinutes()}:</p>
         <p className="seconds">{this.format(this.state.seconds)}</p>
