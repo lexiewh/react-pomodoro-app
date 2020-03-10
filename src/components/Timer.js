@@ -12,16 +12,19 @@ export default class Timer extends React.Component {
       long: Number(this.props.match.params.longBreak),
       seconds: 0,
       session: 'Pomodoro Session',
-      interval: Number(this.props.match.params.interval)
+      interval: Number(this.props.match.params.interval),
+      isRunning: false
     }
 
     this.format = this.format.bind(this)
     this.startTimer = this.startTimer.bind(this)
+    this.stopTimer = this.stopTimer.bind(this)
     this.sessionSwitch = this.sessionSwitch.bind(this)
     this.getSessionMinutes = this.getSessionMinutes.bind(this)
     this.resetSessionMinutes = this.resetSessionMinutes.bind(this)
     this.subtractInterval = this.subtractInterval.bind(this)
     this.intervalText = this.intervalText.bind(this)
+    this.resetTimer = this.resetTimer.bind(this)
   }
 
   format(time) {
@@ -30,7 +33,9 @@ export default class Timer extends React.Component {
   }
 
   startTimer() {
+    if (this.state.isRunning) return;
     this.myInterval = setInterval(() => {
+      this.setState({isRunning: true})
       const { seconds, session } = this.state
       let minutes = this.getSessionMinutes()
 
@@ -66,6 +71,21 @@ export default class Timer extends React.Component {
       }
     }, 1000)
   }
+
+stopTimer() {
+  if (!this.state.isRunning) return
+  this.setState({isRunning: false})
+  clearInterval(this.myInterval)
+}
+
+resetTimer() {
+  this.stopTimer()
+  this.resetSessionMinutes()
+  this.setState({
+    session: "Pomodoro Session",
+    seconds: 0
+  })
+}
 
 getSessionMinutes() {
   const { session, prod, long, short } = this.state
@@ -151,8 +171,8 @@ resetSessionMinutes() {
 
         <Button.Group size='large'>
           <Button onClick={this.startTimer}>Start</Button>
-          <Button>Stop</Button>
-          <Button>Reset</Button>
+          <Button onClick={this.stopTimer}>Stop</Button>
+          <Button onClick={this.resetTimer}>Reset</Button>
         </Button.Group>
         </Grid.Column>
       </Grid>
