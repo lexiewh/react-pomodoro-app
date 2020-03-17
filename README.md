@@ -46,3 +46,4 @@ I used the following resources to help develop this project:
 - [Form Validation with React Hooks](https://upmostly.com/tutorials/form-validation-using-custom-react-hooks)
 - [React Router](https://reacttraining.com/react-router/)
 - [Semantic UI](https://react.semantic-ui.com/)
+- [Deployment to GH Pages](https://github.com/gitname/react-gh-pages)
