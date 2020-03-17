@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import TimeForm from './TimeForm'
+import TimeForm from './Form/TimeForm'
 import Timer from './Timer'
 
 export default function App() {
