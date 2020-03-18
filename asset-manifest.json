@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.js": "/react-pomodoro-app/static/js/main.5828bff4.chunk.js",
-    "main.js.map": "/react-pomodoro-app/static/js/main.5828bff4.chunk.js.map",
+    "main.css": "/react-pomodoro-app/static/css/main.26f6e4e2.chunk.css",
+    "main.js": "/react-pomodoro-app/static/js/main.7af9629b.chunk.js",
+    "main.js.map": "/react-pomodoro-app/static/js/main.7af9629b.chunk.js.map",
     "runtime-main.js": "/react-pomodoro-app/static/js/runtime-main.8a404246.js",
     "runtime-main.js.map": "/react-pomodoro-app/static/js/runtime-main.8a404246.js.map",
     "static/css/2.14de4e8a.chunk.css": "/react-pomodoro-app/static/css/2.14de4e8a.chunk.css",
-    "static/js/2.914bf6d6.chunk.js": "/react-pomodoro-app/static/js/2.914bf6d6.chunk.js",
-    "static/js/2.914bf6d6.chunk.js.map": "/react-pomodoro-app/static/js/2.914bf6d6.chunk.js.map",
+    "static/js/2.b5244da5.chunk.js": "/react-pomodoro-app/static/js/2.b5244da5.chunk.js",
+    "static/js/2.b5244da5.chunk.js.map": "/react-pomodoro-app/static/js/2.b5244da5.chunk.js.map",
     "index.html": "/react-pomodoro-app/index.html",
-    "precache-manifest.7d25527ddcd5cb5356c14c4486d5781b.js": "/react-pomodoro-app/precache-manifest.7d25527ddcd5cb5356c14c4486d5781b.js",
+    "precache-manifest.94dccec984dbe83b4c0fad2ba2f6624d.js": "/react-pomodoro-app/precache-manifest.94dccec984dbe83b4c0fad2ba2f6624d.js",
     "service-worker.js": "/react-pomodoro-app/service-worker.js",
     "static/css/2.14de4e8a.chunk.css.map": "/react-pomodoro-app/static/css/2.14de4e8a.chunk.css.map",
-    "static/js/2.914bf6d6.chunk.js.LICENSE.txt": "/react-pomodoro-app/static/js/2.914bf6d6.chunk.js.LICENSE.txt",
+    "static/css/main.26f6e4e2.chunk.css.map": "/react-pomodoro-app/static/css/main.26f6e4e2.chunk.css.map",
+    "static/js/2.b5244da5.chunk.js.LICENSE.txt": "/react-pomodoro-app/static/js/2.b5244da5.chunk.js.LICENSE.txt",
     "static/media/alert.mp3": "/react-pomodoro-app/static/media/alert.ae1577e8.mp3",
     "static/media/semantic.min.css": "/react-pomodoro-app/static/media/outline-icons.ef60a4f6.woff",
     "static/media/logo.png": "/react-pomodoro-app/static/media/logo.c2b885cd.png"
@@ -19,7 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.8a404246.js",
     "static/css/2.14de4e8a.chunk.css",
-    "static/js/2.914bf6d6.chunk.js",
-    "static/js/main.5828bff4.chunk.js"
+    "static/js/2.b5244da5.chunk.js",
+    "static/css/main.26f6e4e2.chunk.css",
+    "static/js/main.7af9629b.chunk.js"
   ]
 }
