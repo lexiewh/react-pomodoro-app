@@ -33,6 +33,7 @@ function TimeForm() {
               <Input
                 fluid
                 icon='time'
+                type='number'
                 iconPosition='left'
                 placeholder="Productive Time (minutes)"
                 name='prodTime'
