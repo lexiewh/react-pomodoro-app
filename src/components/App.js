@@ -12,6 +12,7 @@ export default function App() {
             path="/timer/:productiveTime-:shortBreak-:longBreak-:interval"
             component={Timer}
             />
+          <Route component={TimeForm} />
         </Switch>
     </BrowserRouter>
   )
