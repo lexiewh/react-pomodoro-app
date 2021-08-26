@@ -4,6 +4,11 @@ import './stylesheets/main.css'
 import 'semantic-ui-css/semantic.min.css'
 
 // Components
-import App from './components/App';
+import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
