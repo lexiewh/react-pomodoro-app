@@ -10,12 +10,12 @@ export default class Timer extends React.Component {
     super(props)
 
     this.state = {
-      prod: JSON.parse(sessionStorage.getItem('times')).prodTime,
-      short: JSON.parse(sessionStorage.getItem('times')).shortBreak,
-      long: JSON.parse(sessionStorage.getItem('times')).longBreak,
+      prod: Number(this.props.match.params.productiveTime),
+      short: Number(this.props.match.params.shortBreak),
+      long: Number(this.props.match.params.longBreak),
       seconds: 0,
       session: 'Pomodoro Session',
-      interval: JSON.parse(sessionStorage.getItem('times')).interval,
+      interval: Number(this.props.match.params.interval),
       isRunning: false
     }
 
