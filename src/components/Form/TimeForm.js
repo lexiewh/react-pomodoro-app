@@ -16,8 +16,9 @@ function TimeForm() {
   } = useForm(submit, validate)
 
   function submit() {
-    console.log(values)
-    history.push(`/timer/${values.prodTime}-${values.shortBreak}-${values.longBreak}-${values.interval}`)
+    sessionStorage.setItem("times", JSON.stringify(values))
+    console.log(JSON.parse(sessionStorage.getItem('times')).prodTime)
+    history.push(`/timer`)
   }
 
   return(
