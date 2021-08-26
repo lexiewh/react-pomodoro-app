@@ -5,6 +5,7 @@
 ## Project Status
 
 [![Build Status](https://app.travis-ci.com/lexiewh/react-pomodoro-app.svg?branch=master)](https://app.travis-ci.com/lexiewh/react-pomodoro-app)
+
 This project is still in development. Below are the steps that need to be completed.
 
 - Testing
