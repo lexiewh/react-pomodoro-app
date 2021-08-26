@@ -1,13 +1,17 @@
 ## Pomodoro App 🍅
+
 > A productivity timer built with React, Semantic UI, and CSS
 
 ## Project Status
+
+[![Build Status](https://app.travis-ci.com/lexiewh/react-pomodoro-app.svg?branch=master)](https://app.travis-ci.com/lexiewh/react-pomodoro-app)
 This project is still in development. Below are the steps that need to be completed.
 
 - Testing
 - General code refactoring
 
 ## Deployment 🚀
+
 The link to the application can be found here once it is deployed.
 
 ## View the application
@@ -20,24 +24,23 @@ Example of form validation
 
 ## Installation and Setup Instructions
 
-Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
 
 Installation:
 
-`npm install`  
+`npm install`
 
-To Run Test Suite:  
+To Run Test Suite:
 
-`npm test`  
+`npm test`
 
 To Start Server:
 
-`npm start`  
+`npm start`
 
 To Visit App:
 
-`localhost:3000`  
-
+`localhost:3000`
 
 ## Acknowledgments
 

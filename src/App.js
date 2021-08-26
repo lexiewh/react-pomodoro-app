@@ -1,19 +1,19 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import TimeForm from './Form/TimeForm'
-import Timer from './Timer'
+import TimeForm from './components/Form/TimeForm'
+import Timer from './components/Timer'
 
-export default function App() {
+function App() {
   return(
     <BrowserRouter>
         <Switch>
           <Route exact path="/" component={TimeForm}/>
           <Route
-            path="/timer/:productiveTime-:shortBreak-:longBreak-:interval"
+            path="/timer"
             component={Timer}
             />
-          <Route component={TimeForm} />
         </Switch>
     </BrowserRouter>
   )
 }
+export default App
