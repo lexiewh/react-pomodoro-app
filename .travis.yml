@@ -4,8 +4,6 @@ node_js:
 - '12'
 script:
 - npm run build
-deploy:
-  provider: firebase
-  token:
-    secure: AaAJWG9ohvBTIdpHekpozRgsgXD4NtTATjycHiIHJTDMhGZbfZRY8fUaPTRLO0926HDL28rA2oeG7HCLulMTYNJveLBfSenuEFdW9Eca9Qbc0CtfsWSrx/EP284AlPgwyj8Q/tBJbY6kWtuEIpPyO7DCZ8ndnyhdaD2JcoLTjGfgZv0/gY4ogBE0H5DTCaBV8xfRgGeVub4Xsmhuj4AnVrficT0DwXraBX36yAL56KLJVgS4oaM2T4dBUqhRmSHromx3iRBMl/CgoV0Mitg0cWi8QWGCpc7wZQS0k0AQHRD4i+b3i+in5NGfK11z58wRzFdul8VRFMCUHFTWa9x+afpQnzhu4vNFwRwIdeydZyM0wNryVpLroeVZD1kPzxnZ4qmf2AxXA3YbBrIFAM50pkOxf+syr9M3+ovdiz7qU11QkeqbZXmOw6Sll2ik91xIrkXCt74GJ6t3WemyY0N309zSX6rgYj5Rd1fkN0YEEhDvUH+1JLcEExIW8KdH9XAw4Y5929PJBCySxWdNoXNVjRF+AGcbgyK61mqIhJSpvmHCyx6yyHh9bqRYzp5Q1jb7ICI6K016JgLCjxAnVHEBgwJyYAbbjInjbGFPp4vw9M2rMDtoXyIRAno4hrC+2GtcrDnPgHO9nVFHE93Hy6ZxrYrDWaEF0lh5oGN2epbvhlk=
-  project: "react-pomodoro-app"
+after_success:
+  - npm install -g firebase-tools
+  - firebase deploy --token "$FIREBASE_TOKEN"
