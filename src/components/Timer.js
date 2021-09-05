@@ -10,12 +10,12 @@ export default class Timer extends React.Component {
     super(props)
 
     this.state = {
-      prod: JSON.parse(sessionStorage.getItem('times')).prodTime,
-      short: JSON.parse(sessionStorage.getItem('times')).shortBreak,
-      long: JSON.parse(sessionStorage.getItem('times')).longBreak,
+      prod: Number(JSON.parse(sessionStorage.getItem('times')).prodTime),
+      short: Number(JSON.parse(sessionStorage.getItem('times')).shortBreak),
+      long: Number(JSON.parse(sessionStorage.getItem('times')).longBreak),
       seconds: 0,
       session: 'Pomodoro Session',
-      interval: JSON.parse(sessionStorage.getItem('times')).interval,
+      interval: Number(JSON.parse(sessionStorage.getItem('times')).interval),
       isRunning: false
     }
 
@@ -108,13 +108,13 @@ resetSessionMinutes() {
   const { session } = this.state
 
   if (session === "Pomodoro Session") {
-    this.setState({prod: Number(this.props.match.params.productiveTime)})
+    this.setState({prod: Number(JSON.parse(sessionStorage.getItem('times')).prodTime)})
   }
   if (session === "Short Break") {
-    this.setState({short: Number(this.props.match.params.shortBreak)})
+    this.setState({short: Number(JSON.parse(sessionStorage.getItem('times')).shortBreak)})
   }
   if (session === "Long Break") {
-    this.setState({long: Number(this.props.match.params.longBreak)})
+    this.setState({long: Number(JSON.parse(sessionStorage.getItem('times')).longBreak)})
   }
 }
 
@@ -143,7 +143,7 @@ resetSessionMinutes() {
       this.setState({interval: this.state.interval - 1})
     }
     else {
-      this.setState({interval: Number(this.props.match.params.interval)})
+      this.setState({interval: Number(JSON.parse(sessionStorage.getItem('times')).interval)})
     }
   }
 
